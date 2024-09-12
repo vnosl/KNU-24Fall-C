@@ -17,21 +17,24 @@ int main(void) {
 
 	if (num1 == 1) {
 		num4 = num2 + num3;
+		printf("%lf + %lf = %lf", num2, num3, num4);
 	}
 	else if (num1 == 2) {
 		num4 = num2 - num3;
+		printf("%lf - %lf = %lf", num2, num3, num4);
 	}
 	else if (num1 == 3) {
 		num4 = num2 * num3;
+		printf("%lf * %lf = %lf", num2, num3, num4);
 	}
 	else if (num1 == 4) {
 		num4 = num2 / num3;
+		printf("%lf / %lf = %lf", num2, num3, num4);
 	}
 	else {
 		printf("잘못 입력하셨습니다.");
 
 	}
 
-	printf("%lf \n", num4);
 	return 0;
 }
