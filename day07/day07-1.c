@@ -8,7 +8,7 @@ int main(void) {
 
 
 
-	for (int i = 1; i <= num; i++)//층 수만큰 반복
+	for (int i = 1; i <= num; i++)//층 수만큼 반복
 	{
 		for (int o = 0; o < num - i; o++)//앞쪽 공백 입력 층수 - 반복수
 		{
