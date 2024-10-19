@@ -28,8 +28,8 @@ int main(void) {
 
 	num1 = (char*)malloc(sizeof(char) * 100);
 
+	printf("문자열을 입력해주세요 : ");
 	scanf_s("%s", num1, 100);  // 문자열 입력
-	printf("입력된 문자열: %s\n", num1);  // 원래 문자열 출력
 
 	int length = strlen(num1);  // 문자열 길이 저장
 
@@ -42,7 +42,7 @@ int main(void) {
 		*(num1 + length - (i + 1)) = temp;
 	}
 
-	printf("역순 문자열: %s\n", num1);  // 역순 문자열 출력
+	printf("뒤집어진 문자열 : %s\n", num1);  // 역순 문자열 출력
 
 	free(num1);  // 동적 할당 메모리 해제
 	return 0;
