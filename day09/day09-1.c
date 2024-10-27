@@ -8,10 +8,10 @@ typedef struct{
 
 }num;
 
-void vector_sum(num *a, num *b);
-void vector_sub(num* a, num* b);
-void vector_sumop(num* a, num* b);
-void vector_subop(num* a, num* b);
+void vector_sum(num a, num b);
+void vector_sub(num a, num b);
+void vector_sumop(num a, num b);
+void vector_subop(num a, num b);
 
 int main(void) {
 	int num1;
@@ -41,16 +41,16 @@ int main(void) {
 		switch (num1)
 		{
 		case 1:
-			vector_sum(&a, &b);
+			vector_sum(a, b);
 			break;
 		case 2:
-			vector_sub(&a, &b);
+			vector_sub(a, b);
 			break;
 		case 3:
-			vector_subop(&a, &b);
+			vector_subop(a, b);
 			break;
 		case 4:
-			vector_sumop(&a, &b);
+			vector_sumop(a, b);
 			break;
 		case 5:
 			printf("프로그램을 종료합니다.");
@@ -66,41 +66,41 @@ int main(void) {
 	return 0;
 }
 
-void vector_sum(num* a, num* b) {
+void vector_sum(num a, num b) {
 	int sum_x, sum_y, sum_z;
 
-	sum_x = (a->x + b->x);
-	sum_y = (a->y + b->y);
-	sum_z = (a->z + b->z);
+	sum_x = (a.x + b.x);
+	sum_y = (a.y + b.y);
+	sum_z = (a.z + b.z);
 
 	printf("x = %d, y = %d, z = %d\n", sum_x, sum_y, sum_z);
 
 }
 
-void vector_sub(num* a, num* b) {
+void vector_sub(num a, num b) {
 	int sub_x, sub_y, sub_z;
 
-	sub_x = (a->x - b->x);
-	sub_y = (a->y - b->y);
-	sub_z = (a->z - b->z);
+	sub_x = (a.x - b.x);
+	sub_y = (a.y - b.y);
+	sub_z = (a.z - b.z);
 
 	printf("x = %d, y = %d, z = %d\n", sub_x, sub_y, sub_z);
 }
 
-void vector_sumop(num* a, num* b) {
+void vector_sumop(num a, num b) {
 	int sumop;
 
-	sumop = (a->x * a->x) + (a->z * a->z) + (a->z * a->z);
+	sumop = (a.x * a.x) + (a.z * a.z) + (a.z * a.z);
 
 	printf("벡터의 내적은 : vec1·vec2 = %d\n", sumop);
 }
 
-void vector_subop(num* a, num* b) {
+void vector_subop(num a, num b) {
 	int subop_x, subop_y, subop_z;
 
-	subop_x = (a->y * b->z - a->z * b->y);
-	subop_y = (a->z * b->x - a->x * b->z);
-	subop_z = (a->x * b->y - a->y * b->x);
+	subop_x = (a.y * b.z - a.z * b.y);
+	subop_y = (a.z * b.x - a.x * b.z);
+	subop_z = (a.x * b.y - a.y * b.x);
 
 	printf("벡터의 외적은x = %d, y = %d, z = %d\n", subop_x, subop_y, subop_z);
 }
