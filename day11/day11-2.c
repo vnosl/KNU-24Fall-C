@@ -20,11 +20,11 @@ int main(void) {
 		end_result = 0;
 		width = (double)(num2 - num1) / i;
 		for (int j = 0; j < i; j++) {
-			height = pow(k, 2) + 1;
-			//height = (-1) * log(1 / k) + sin(k);
+			//height = pow(k, 2) + 1;
+			height = (-1) * log(1 / k) + sin(k);
 			result = height * width;
 			end_result += result;
-			//k += width;
+			k += width;
 		}
 		printf("구간 : %d, 적분 결과 : %lf\n", i, end_result);
 	}
