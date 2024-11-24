@@ -26,7 +26,7 @@ int main(void) {
 			end_result += result;
 			k += width;
 		}
-		printf("구간 : %d, 적분 결과 : %lf\n", i, end_result);
+		printf("구간 : %10d, 적분 결과 : %lf\n", i, end_result);
 	}
 
 
